@@ -24,23 +24,37 @@ void diziTersCevir1(char *dizi,int uzunluk)
 {
     
     char *str;
-    str = dizi + uzunluk-1;
-    while (*str)
+    str = dizi + uzunluk-2;//-2 -->indis ve uzunluk farkı oluşması -->null terminatör
+    while (str>=dizi)
     { 
-        cout<<"ds"<<*str<<endl;
+        cout<<*str;
         str--;
     }
+    
     
 
 }
 
-void diziTersCevir2(int dizi[],int uzunluk)
+void diziTersCevir2(int *dizi,int uzunluk)
+{
+    
+    int *str;
+    str = dizi + uzunluk-1;//dizi dizisesinin son indisine ulaşıldı.
+    while (str>=dizi)//str diziden konum olarak büyük olduğu müddetçe
+    { 
+        cout<<*str<<" ";
+        str--;
+    }
+    
+    
+
+}
+void diziTersCevir3(int dizi[],int uzunluk)
 {
     
     for(int i = 0; i<uzunluk; i++)
     {
-        
-        i++;
+        cout<<dizi[i]<<" "; 
     }
     
 
@@ -54,8 +68,10 @@ int main(){
 
     //diziTersCevir0(sayilar,diziUzunluk);
 
-    diziTersCevir1(dizi,diziUzunluk);
+    //diziTersCevir1(dizi,diziUzunluk);
+    cout<<endl;
     //diziTersCevir2(sayilar,diziUzunluk);
+    diziTersCevir3(sayilar,diziUzunluk);
 
     return 0;
 }
