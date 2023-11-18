@@ -2,36 +2,38 @@
 
 using namespace std;
 
-
 class Node{
     public:
         int data;
         Node *next;
-        Node(int data,Node *next=NULL ){
+        Node(int data, Node *next =NULL){
             this->data=data;
             this->next=next;
         }
+
 };
 
 int size(Node *temp){
-    
-    int size=0;
-    while (temp != NULL){
+    int size =0;
+    while (temp != NULL)
+    {
         size++;
         temp=temp->next;
     }
     return size;
 }
 
-void    print(Node *temp){
-    if (temp != NULL){
+void print(Node *temp){
+    while (temp !=NULL)
+    {
         cout<<temp->data<<endl;
-        print(temp->next);
+        temp = temp->next;
     }
+    
 }
 
 int main(){
-    Node *head,*temp;
+     Node *head,*temp;
     head = new Node(5);
 
     temp = head;
@@ -84,5 +86,31 @@ int main(){
     cout <<"Eleman Sayisi: ";
     cout<<size(head)<<endl;
     print(head);
+
+    Node *new_node_center;
+    new_node_center = new Node(54);
+
+    int sayac = 0;
+    int konum=4;
+    temp = head;
+    while (temp->next !=NULL)
+    {
+        if(konum-1==sayac)
+        {
+            break;
+        }
+        temp=temp->next; 
+        sayac ++;/*Belirli konuma gelindiğinde sayac ile konumu karşılatırılır ve donguden çıkılır*/
+    }
+    new_node_center->next =temp->next;
+    temp->next=new_node_center;
+
+
+    cout <<"Eleman Sayisi: ";
+    cout<<size(head)<<endl;
+    print(head);
+
+
     
+
 }
