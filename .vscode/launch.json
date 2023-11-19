@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Veri_Yapilari_ve_Algoritmalar/08_queue",
-      "program": "c:/Veri_Yapilari_ve_Algoritmalar/08_queue/build/Debug/outDebug",
+      "cwd": "c:/Veri_Yapilari_ve_Algoritmalar/07_Linked_list",
+      "program": "c:/Veri_Yapilari_ve_Algoritmalar/07_Linked_list/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
