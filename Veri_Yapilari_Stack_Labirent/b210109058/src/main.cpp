@@ -88,13 +88,13 @@ int main()
     {   
         if (labirentKopya[suankiPozisyon.x][suankiPozisyon.y] == CIKIS) break;
 
-        // Get the labirent element at each direction of the current position
+         
         char pozisyonYukari = labirentKopya[suankiPozisyon.x - 1][suankiPozisyon.y];
         char pozisyonSaga = labirentKopya[suankiPozisyon.x][suankiPozisyon.y + 1];
         char pozisyonAsagi = labirentKopya[suankiPozisyon.x + 1][suankiPozisyon.y];
         char pozisyonSola = labirentKopya[suankiPozisyon.x][suankiPozisyon.y - 1];
 
-        // Mark this position as KESIF, then go up one position
+         
         if (( pozisyonYukari == YOL || pozisyonYukari == CIKIS ) && suankiPozisyon.x - 1 >= 0)
         {
             path.Push(suankiPozisyon);
@@ -102,7 +102,7 @@ int main()
             suankiPozisyon.x--;
         }
 
-        // Mark this position as KESIF, then go right one position
+        
         else if (( pozisyonSaga == YOL || pozisyonSaga == CIKIS) && suankiPozisyon.y + 1 < SUTUN)
         {
             path.Push(suankiPozisyon);
@@ -110,7 +110,7 @@ int main()
             suankiPozisyon.y++;
         }
 
-        // Mark this position as KESIF, then go down one position
+         
         else if ((pozisyonAsagi == YOL || pozisyonAsagi == CIKIS) && suankiPozisyon.x + 1 < SATIR)
         {
             path.Push(suankiPozisyon);
@@ -118,7 +118,7 @@ int main()
             suankiPozisyon.x++;
         }
 
-        // Mark this position as KESIF, then go left one position
+         
         else if ((pozisyonSola == YOL || pozisyonSola == CIKIS) && suankiPozisyon.y >= 0)
         {
             path.Push(suankiPozisyon);
@@ -126,7 +126,7 @@ int main()
             suankiPozisyon.y--;
         }
 
-        // Mark this position as a DUVAR, then go back one position
+         
         else
         {
             labirentKopya[suankiPozisyon.x][suankiPozisyon.y] = DUVAR;
@@ -145,7 +145,7 @@ int main()
 
 
 
-    // Output the Animation of Walking the path
+     
 
     for (int i = 0; i < sonBoyut; i++)
     {
